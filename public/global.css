@@ -85,13 +85,16 @@ body {
   box-shadow: 6px 6px 24px #888;
 }
 
+input:focus {
+  outline: none;
+}
+
 input[type=text] {
   border: 0;
   font-size: 24px;
   padding: 6px;
-  width: 102px;
+  width: 150px;
   margin-left: 12px;
-  text-align: center;
 }
 
 input[type=submit] {
@@ -116,4 +119,37 @@ input[type=submit]:hover {
   width: 120px;
   display: inline-block;
   font-weight: bold;
+}
+
+.autocomplete-w1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 6px 0 0 6px;
+}
+  
+.autocomplete {
+  width: 150px;
+  border: 1px solid #999;
+  background: #FFF;
+  cursor: default;
+  text-align: left;
+  max-height: 350px;
+  overflow: auto;
+  margin: -6px 6px 6px -6px;
+}
+
+.autocomplete .selected {
+  background: #F0F0F0;
+}
+
+.autocomplete div {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow:hidden;
+}
+
+.autocomplete strong {
+  font-weight: normal;
+  color: #3399FF;
 }

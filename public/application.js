@@ -30,6 +30,14 @@ fillResult = function(data) {
 }
 
 $(function() {
+  options = {
+    serviceUrl: '/cccc',
+    fnFormatResult: function(value, data, currentValue) {
+      return "<strong>" + value + " (" + data + ")</strong>";
+    }
+  };
+  $("#cccc").autocomplete(options);
+  
   $('#form').submit(function() {
     onSubmit();
     return false;
