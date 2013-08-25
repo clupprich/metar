@@ -1,5 +1,7 @@
+require 'sinatra'
 require 'json'
 require 'csv'
+require 'metar'
 
 def load_airport_data(filename)
   return CSV.read(filename, encoding: "ISO8859-1").inject({}) { |h, arr| h[arr[5]] = arr; h }
