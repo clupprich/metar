@@ -16,7 +16,7 @@ class MetarSource < Sinatra::Base
   end
   
   get "/metar/:location" do
-    raw = Metar::Raw.new(params[:location])
+    raw = Metar::Raw.new(params[:location].upcase)
     parser = Metar::Parser.new(raw)
     report = Metar::Report.new(parser)
     all = report.all
